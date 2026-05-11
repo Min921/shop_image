@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品图片分析与推荐系统</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <div class="input-panel">
+          <div>
+            <p class="eyebrow">Multimodal Shopping Assistant</p>
+            <h1>商品图片分析与推荐系统</h1>
+          </div>
+
+          <label class="uploader" for="imageInput">
+            <input id="imageInput" type="file" accept="image/*" />
+            <img id="preview" alt="" />
+            <span id="uploadText">上传商品图片</span>
+          </label>
+
+          <label class="field">
+            <span>购物需求</span>
+            <textarea
+              id="needInput"
+              rows="5"
+              placeholder="例如：想买一款适合通勤、能装电脑、颜色低调的双肩包"
+            ></textarea>
+          </label>
+
+          <button id="analyzeBtn" type="button">
+            <span>开始分析</span>
+          </button>
+        </div>
+
+        <div class="result-panel">
+          <div class="status" id="status">等待上传图片或输入需求</div>
+          <div id="result" class="result empty">
+            <p>分析结果会显示在这里，包括商品类别、视觉特征、推荐理由、适用场景和购买建议。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
